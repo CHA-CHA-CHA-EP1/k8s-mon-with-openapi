@@ -274,6 +274,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "11157ac094ffbdde99aa67b23417ebdd801842852b500e395a45a9c0aac03e4a"
 
 [[package]]
+name = "envy"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3f47e0157f2cb54f5ae1bd371b30a2ae4311e1c028f575cd4e81de7353215965"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "equivalent"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -615,15 +624,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "k8s-mon"
-version = "0.1.0"
-dependencies = [
- "k8s-openapi",
- "kube",
- "tokio",
-]
-
-[[package]]
 name = "k8s-openapi"
 version = "0.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -634,6 +634,17 @@ dependencies = [
  "serde",
  "serde-value",
  "serde_json",
+]
+
+[[package]]
+name = "k8s_mon"
+version = "0.1.0"
+dependencies = [
+ "envy",
+ "k8s-openapi",
+ "kube",
+ "serde",
+ "tokio",
 ]
 
 [[package]]
